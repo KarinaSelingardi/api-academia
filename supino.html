@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>SUPERIOR</title>
+    <script src="supino.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="superior">
+            <h1 class="font"><strong>SUPERIOR</strong></h1>
+        </div>
+
+        <form id="exerciseForm">
+            <label for="exerciseInput">Exercício:</label>
+            <input type="text" id="exerciseInput" name="exerciseInput" required>
+
+            <label for="seriesInput">Série:</label>
+            <input type="number" id="seriesInput" name="seriesInput" required>
+
+            <label for="repsInput">Repetição:</label>
+            <input type="number" id="repsInput" name="repsInput" required>
+
+            <button type="button" onclick="saveExercise()">Salvar</button>
+        </form>
+
+        <!-- Texto ao lado da imagem -->
+        <div id="textContainer">
+            <p>ercício: <span id="numExercicios"></span></p>
+            <p>Número de Séries: <span id="numSeries">0</span></p>
+            <p>Repetições: <span id="numRepeticoes">0</span></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="pai">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Conteúdo -->
+                </div>
+                <div class="col-md-6">
+                    <!-- Imagem no canto direito abaixo -->
+                    <img class="supino" src="https://github.com/KarinaSelingardi/api-academia/blob/main/supino.jpeg?raw=true" onclick="alert('demonstração supino inclinado')">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function saveExercise() {
+            // Obtenha os valores dos campos do formulário
+            var exercise = document.getElementById('exerciseInput').value;
+            var series = document.getElementById('seriesInput').value;
+            var reps = document.getElementById('repsInput').value;
+
+            // Atualize os valores no texto ao lado da imagem
+            document.getElementById('numExercicios').innerText = exercise;
+            document.getElementById('numSeries').innerText = series;
+            document.getElementById('numRepeticoes').innerText = reps;
+
+            // Limpe o formulário após o salvamento
+            document.getElementById('exerciseForm').reset();
+        }
+    </script>
+</body>
+</html>
+
+
