@@ -1,0 +1,94 @@
+// Estilos globais, se necessário
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 76px;
+    flex-shrink: 0;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // Estilos específicos para o .superior
+    .superior {
+        h1.font {
+            width: 252px;
+            height: 22px;
+            flex-shrink: 0;
+            color: #FFF;
+            text-align: center;
+            font-family: Jua;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    // Estilos específicos para o formulário
+    #exerciseForm {
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    // Posicionamento da imagem
+    #pai {
+        .row {
+            .col-md-6 {
+                position: relative;
+
+                .supino {
+                    width: 346px;
+                    height: 372px;
+                    flex-shrink: 0;
+                    background-image: url("https://github.com/KarinaSelingardi/api-academia/blob/main/supino.jpeg?raw=true");
+                    background-size: cover;
+                    background-position: center right;
+                }
+
+                // Container para o texto ao lado da imagem
+                .text-container {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 50%;
+                    padding: 20px;
+                    box-sizing: border-box;
+
+                    // Estilos específicos para o texto
+                    p {
+                        color: #FFF;
+                        font-family: Inter;
+                        font-size: 16px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: #000;
+}
